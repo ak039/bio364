@@ -1,0 +1,97 @@
+---
+title: "Second Nature Carbon Neutrality Reporting"
+author: "Ken Field"
+date: "1/10/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+if (!require("cluster")) install.packages("cluster"); library(cluster)
+if (!require("Rtsne")) install.packages("Rtsne"); library(Rtsne)
+if (!require("tidyverse")) install.packages("tidyverse"); library(tidyverse)
+```
+
+## Reporting Data
+
+The dataset was downloaded from <http://reporting.secondnature.org/institution/data/> in January 2020. It represents self-reporting from educational institutions that have signed a Presidents’ Climate Leadership Commitment, a voluntary carbon reduction program for institutions of higher education.
+
+Note according to the Second Nature organization:
+Making fair comparisons between higher education institutions is always challenging due to the rich diversity of higher education. The unverified nature of the information in this database and unavailability of unbiased normalization metrics means such comparisons are even more difficult. Making direct institution to institution comparisons should be done with caution and recognition that all comparisons between institutions are inherently biased.
+
+```{r Loading data}
+SecondNatureReporting <- read_csv("../04-Data/SecondNatureReporting.csv")
+```
+
+## Cleaning and Exploring Data
+
+
+```{r Data cleaning}
+str(SecondNatureReporting)
+ClusterData <- SecondNatureReporting %>%
+  select("Institution", "State", "Carnegie Classification", "Total Gross Emissions", "Total Building Sq. Ft.")
+```
+
+```{r Data Cleaning}
+summary(ClusterData)
+ClusterData2 <- ClusterData %>%
+  filter(`Total Gross Emissions` != 0) %>%
+  filter(`Total Building Sq. Ft.` != 0)
+summary(ClusterData2)
+ClusterMatrix <- as.data.frame(ClusterData2[,2:5])
+rownames(ClusterMatrix) <- ClusterData2$Institution
+ClusterMatrix$State <- as.factor(ClusterMatrix$State)
+ClusterMatrix$`Carnegie Classification` <- as.factor(ClusterMatrix$`Carnegie Classification`)
+str(ClusterMatrix)
+```
+
+## Clustering Data
+
+From: https://towardsdatascience.com/clustering-on-mixed-type-data-8bbd0a2569c3
+
+```{r}
+#' Compute Gower distance
+gower_dist <- daisy(ClusterMatrix, metric = "gower")
+
+gower_mat <- as.matrix(gower_dist)
+
+ClusterMatrix[which(gower_mat == min(gower_mat[gower_mat != min(gower_mat)]), arr.ind = TRUE)[1, ], ]
+
+ClusterMatrix[which(gower_mat == max(gower_mat[gower_mat != max(gower_mat)]), arr.ind = TRUE)[1, ], ]
+
+sil_width <- c(NA)
+for(i in 2:8){  
+  pam_fit <- pam(gower_dist, diss = TRUE, k = i)  
+  sil_width[i] <- pam_fit$silinfo$avg.width  
+}
+plot(1:8, sil_width,
+     xlab = "Number of clusters",
+     ylab = "Silhouette Width")
+lines(1:8, sil_width)
+
+k <- 5
+pam_fit <- pam(gower_dist, diss = TRUE, k)
+pam_results <- ClusterMatrix %>%
+  mutate(cluster = pam_fit$clustering) %>%
+  group_by(cluster) %>%
+  do(the_summary = summary(.))
+pam_results$the_summary
+
+tsne_obj <- Rtsne(gower_dist, is_distance = TRUE)
+tsne_data <- tsne_obj$Y %>%
+  data.frame() %>%
+  setNames(c("X", "Y")) %>%
+  mutate(cluster = factor(pam_fit$clustering))
+ggplot(aes(x = X, y = Y), data = tsne_data) +
+  geom_point(aes(color = cluster))
+```
+
+```{r}
+Clusters <- pam_fit$clustering
+pam_fit$clustering[names(Clusters) == "Bucknell University"]
+Cluster2 <- Clusters == 2
+Cluster2Data <- ClusterData2[Cluster2,]
+```
+
+
+Bucknell is in Cluster 2
