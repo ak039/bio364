@@ -1,0 +1,11 @@
+When you have problems pushing or pulling your repo on your computer to/from your repo up on github.
+
+  1. Make a new folder on your computer that is not within your repo folder ("backup")
+  2. Copy all of your repo folder, its files and subfolders to the new folder that you just made 
+  3. Now you have a safe backup of all your current working files.
+  4. Now delete the folder/subfolders and all files, in your repo so that it is gone.
+  5. Now go and clone your repo from Github, so you have a fresh local copy.
+  6. Now you should be able to git pull and git push without problem to your computer.
+  7. After successfully git pulling, move any single files that were in your old repo from your backup folder, 
+      one at a time to your new repository.
+  8. Then git commit and git push, and they will go up to Github.
