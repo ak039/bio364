@@ -15,3 +15,20 @@ ggplot(WinterBreak) +
   geom_smooth(method = "lm", fullrange = TRUE) +
   xlim(2010, 2030) +
   ylim(0,40)
+
+
+ggplot(WinterBreak[5:8,]) +
+  aes(x = Years, y = WinterBreakDays) +
+  geom_point() +
+  theme_cowplot() +
+  geom_smooth(method = "loess", fullrange = TRUE) +
+  xlim(2010, 2030) +
+  ylim(0,40)
+
+ggplot(WinterBreak[4:8,]) +
+  aes(x = Years, y = WinterBreakDays) +
+  geom_point() +
+  theme_cowplot() +
+  geom_smooth(method="lm", formula= (y~poly(x,2)), fullrange = TRUE, se = FALSE) +
+  xlim(2017, 2025) +
+  ylim(0,40)
