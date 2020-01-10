@@ -20,14 +20,14 @@
 	%   read geometry.pdf for detailed page layout information
 
 \usepackage{graphicx} % support the \includegraphics command and options
-\usepackage{sidecap}
+% \usepackage{sidecap}
 
-% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
 
 %%% PACKAGES
 \usepackage{booktabs} % for much better looking tables
 \usepackage{array} % for better arrays (eg matrices) in maths
-\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+% \usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
 \usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
 \usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
 %\usepackage{datetime} %suggested to get todays data and time
@@ -35,7 +35,7 @@
 
 \usepackage{listings} % For displaying code
 
-\usepackage{placeins}      % This package gives us \FloatBarrier
+% \usepackage{placeins}      % This package gives us \FloatBarrier
 
 \usepackage{mathtools} % this will also load amsmath package
 
@@ -48,28 +48,28 @@
 \lfoot{\today}\cfoot{}\rfoot{\thepage}
 
 %%% SECTION TITLE APPEARANCE
-\usepackage{sectsty}
-\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% \usepackage{sectsty}
+% \allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
 % (This matches ConTeXt defaults)
 
 %\usepackage[labelfont = footnotesize, textfont = small, justification=centering]{caption}  %allows us to change the font of the captions on figures
 %\setlength{\abovecaptionskip}{5pt}
 %\setlength{\belowcaptionskip}{-10pt}
 
-\usepackage{wrapfig}  %allows figures to have text wrapped around them. Apparently this does not work perfectly in Latex and requires manual adjustment of figures and such
+% \usepackage{wrapfig}  %allows figures to have text wrapped around them. Apparently this does not work perfectly in Latex and requires manual adjustment of figures and such
 
 \hyphenation{op-tical net-works semi-conduc-tor}
 %
 %\usepackage{parskip}
 %\setlength{\parindent}{5pt}
 
-\usepackage{enumitem}  %%%%allows you to begin enumerate at 0
+% \usepackage{enumitem}  %%%%allows you to begin enumerate at 0
 
 %%% ToC (table of contents) APPEARANCE
-\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
-\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
-\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
-\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+% \usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+% \usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+% \renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+% \renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
 
 \newcommand{\squeezeup}{\vspace{-2.5mm}}
 
@@ -81,8 +81,8 @@
 
 %%% The "real" document content comes below...
 
-\title{Biology 364/664 Syllabus \\ \emph{Analysis and Visualization of Biological Data} \\ Spring 2019 	\\
-Tues Thurs 11:00am to 11:52am	and Tues 1:00pm to 4:52pm}
+\title{Biology 364/664 Syllabus \\ \emph{Advanced Data Analysis in Biology} \\ Spring 2020 	\\
+Mon Wed 2:00pm to 4:52pm}
 \author{Prof. Ken Field}
 %\date{} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
@@ -100,8 +100,6 @@ Tues Thurs 11:00am to 11:52am	and Tues 1:00pm to 4:52pm}
 
 %-------------------------------------------------------
 \section{Contact Information}
-
-  Prof. Ken Field
   \begin{itemize}
   	\item 208 Biology Building
   	\item kfield@bucknell.edu
@@ -113,12 +111,7 @@ Tues Thurs 11:00am to 11:52am	and Tues 1:00pm to 4:52pm}
 %-------------------------------------------------------
 \section{Course Description}
 
-Introduction to the process of data exploration and visualization using
-state-of-the-art computational techniques. Using ``big data'' from
-public archives or their own research projects, students will learn how
-to rigorously analyze and visualize complex biological datasets. Lab
-will include hands-on work with R and virtual reality. No programming
-experience required.
+Data exploration and visualization using state-of-the-art computational techniques. Using “big data” from their own research projects or public transcriptomic datasets, students will learn to analyze/visualize complex biological datasets. Lab includes hands-on work with R/virtual reality. No prior programming experience required.
     
     
 %-------------------------------------------------------
@@ -151,7 +144,7 @@ experience required.
     {\bf Total = 600 pts.}
   \end{align*}
 
-  The Data Projects and Final Project will be graded using labor-based contract grading as described by \href{http://www.translingualwriting.com/resources/Inoue\%20Contract.pdf}{Asao Inoue}. These assignments will utilize a goal-oriented grading system as you develop your skills as a data scientist.  When you or your group completes all of the goals associated with each project, you will earn 21/25 or 170/200 pts (85\%). Failure to do so will result in a lower grade.
+  The Data Projects and Final Project will be graded using labor-based contract grading as described by \href{http://www.translingualwriting.com/resources/Inoue\%20Contract.pdf}{Asao Inoue}. These assignments will utilize a goal-oriented grading system as you develop your skills as a data scientist.  When you (or your group) complete all of the goals associated with each project, you will earn 21/25 or 170/200 pts (85\%). Failure to do so will result in a lower grade.
 
 To earn more than 85\%, you must do the following:
 \begin{itemize}
@@ -166,76 +159,24 @@ To earn more than 85\%, you must do the following:
   \begin{itemize}
  
     \item A Primer in Biological Data Analysis and Visualization Using R, by Gregg Hartvigsen, ISBN: 9780231166997 (Hart)
+    
+  This is the only hardcopy textbook for the course.
   
     \item \href{https://leanpub.com/rprogramming}{R Programming for Data Science}, by Roger D. Peng (PRP)
   
     \item \href{https://leanpub.com/exdata}{Exploratory Data Analysis}, by Roger D. Peng (EDA) 
+    
+    \item \href{https://leanpub.com/openintro-statistics}{Open Intro Statistics 4} (OIS)  
   
   These are  Leanpub books, available from LeanPub for a ”pay what you want” price. 
   
-    \item R for Data Science (R4DS) is a book teaching R for Tidy Data Science, and is available as a bookdown book on the web \href{http://r4ds.had.co.nz/}{R for Data Science}, you can buy an ebook for \$18 from \href{https://play.google.com/store/books/details/Hadley_Wickham_R_for_Data_Science?id=I6y3DQAAQBAJ}{Google Play Store page for this book}. 
-  
-    \item Open Intro Statistics version 3 (OIS) is an open source text book on Inferential Statistics, published under a Creative Commons license, \href{https://drive.google.com/file/d/0B-DHaDEbiOGkc1RycUtIcUtIelE/view}{for free distribution as a pdf}. In addition a copy can be purchased from Amazon for \$9. 
+    \item \href{http://r4ds.had.co.nz/}{R for Data Science} (R4DS) 
   
     \item Additional reading assignments will be distributed via the course git repository in the Readings subdirectory. 
   \end{itemize}
 
-%-------------------------------------------------------
-\FloatBarrier
-\section{BIOL 364 Syllabus: Weekly Topics}
-\begin{table}[ht] 
-	\centering % used for centering table 
-	\begin{tabular}{| c | m{5cm} | m{3cm} | m{5.5cm} |} % centered columns (4 columns) 
-	\hline %inserts horizontal line
-	{\bf Week:Date} & {\bf Topic} & {\bf Reading} & {\bf Project}  \\ % inserts table heading 
-	\hline 
-	\hline % inserts double horizontal line 
-%	 w1\addtolength{}{•}
-  w1:15Jan2019 & Using R, Rstudio, Git & HART1-3 \newline PRP4-5 & Making Graphs in R \\ % inserting body of the table 
-	\hline
-	w2:22Jan2019 & Simple Data Exploration & HART4 \newline PRP6-10 \newline EDA4-7 \newline OIS1-3 & Data Exploration in R \\ 
-	\hline
-	w3:29Jan2019 & Data Visualization & HART5,11 \newline EDA15-16 \newline OIS4-6 & {\bf R Tutorial Project}\\ 
-	\hline 
-	w4:5Feb2019 & Advanded Hypothesis Testing & HART6-8 \newline OIS7-8 & Exploratory Data Analysis \\ 
-	\hline 
-	w5:12Feb2019 & Questionable Data Practices & R4DS22-25 \newline Fraser.pdf & Multiple Testing \newline Model Fitting \\ 
-	\hline 
-	w6:19Feb2019 & Questionable Data Practices & PRP12 \newline EDA12-14 \newline Forstmeier.pdf & {\bf QRP Case Studies Project} \\ 
-	\hline 
-	w7:26Feb2019 & Transcriptomics & \href{https://rnaseq.uoregon.edu/}{RNA-seqlopedia} \newline Brooks.pdf & QC \& Mapping Statistics\\ 
-	\hline 
-	w8:5Mar2019 & Transcriptomics  & SARTools.pdf \newline Williams.pdf & {\bf Transcriptomics Pipeline Project I}\\ 
-	\hline 
-	12Mar2019 & \multicolumn{3}{c}{\bf SPRING BREAK}\\ 
-	\hline
-	w9:19Mar2019 & Interactive Data & minitufte.pdf & {\bf Transcriptomics Pipeline Project II}  \\ 
-	\hline
-	w10:26Mar2019 & Final Project & reproducible-code.pdf &  {\bf TAKEHOME MIDTERM} \newline Data Archives \\
-	\hline
-	w11:2Apr2019 & Final Project &  & Data Wrangling  \\
-	\hline
-	w12:9Apr2019 & Final Project &  & Preregistration  \newline {\bf Data Visualization Project} \\
-	\hline
-	w13:16Apr2019 & Final Project &  & {\bf Final Project Presentations} \\
-	\hline 
-	w14:23Apr2019 & Final Project & & {\bf Final Project Presentations}  \\ 
-	\hline
-	\hline
-	\hline
-	{\bf 8May2019 11am}	  & \multicolumn{3}{c}{\bf TAKEHOME FINAL} \\
-	\hline
-	\hline
-\end{tabular}
- 
-\caption{BIOL356/664 Weekly Syllabus. Peng R Programming for Data Science (PRPx), Peng Exploratory Data Analysis (EDAx), Open Intro Statistics (OISx), R for Data Science (R4DS),  and A Primer in Biological Data Analysis and Visualization Using R (HARTx) refers to chapters assigned as reading. }
-\label{table:Syllabus} % is used to refer this table in the text 
-\end{table} 
-
-\FloatBarrier
 
 %-------------------------------------------------------
-
 
 \section{Policies}
 
@@ -251,20 +192,20 @@ To earn more than 85\%, you must do the following:
   
     Homeworks are due before noon on Friday on the week they are assigned.
     Homework assignments will be submitted on GitHub (more instructions to follow).
-    A 25\% deduction will be assessed for submissions not received by noon on Friday. Assignments will not be accepted after noon on Monday.
+    A 25\% deduction will be assessed for submissions not received by noon on Friday. Assignments will not be accepted after noon on Sunday.
   
   \subsection{Collaboration and Citation}
   
-    For all projects and homework assignments working together is acceptable and encouraged. 
+    For all projects and homework assignments working together is acceptable \textbf{and encouraged}. 
     It is not ethical to do someone else's work or to have someone do your work. 
     You must cite \textbf{all} resources used to work on your homework and projects. 
     Citations should be done at the end of the document. 
-    These references can be to books, Wikipedia and other web resources, and discussions with other students. 
+    These references can be to books, Stack Overflow and other web resources, and discussions with other students. 
     Working together and discussion is not allowed on takehome exams.
   
   \subsection{Academic Integrity Policy}
   
-    Read \href{"http://www.bucknell.edu/AcademicResponsibility.xml"}{Academic Responsibility at Bucknell} for policies regarding academic integrity. Any questions concerning academic responsibility or misconduct will be referred to the Board of Review for Academic Responsibility without hesitation. Always cite the source of any information from outside sources, including online sources and classmates. Assignments may be screened using software designed to detect plaigarism. Unless explicitly directed otherwise, all takehome exams are expected to represent individual, not collaborative, work.
+    Read \href{"https://www.bucknell.edu/academics/academic-responsibility-support/academic-responsibility"}{Academic Responsibility at Bucknell} for policies regarding academic integrity. Any questions concerning academic responsibility or misconduct will be referred to the Board of Review for Academic Responsibility without hesitation. Always cite the source of any information from outside sources, including online sources and classmates. Assignments may be screened using software designed to detect plaigarism. Unless explicitly directed otherwise, all takehome exams are expected to represent individual, not collaborative, work.
   
   \subsection{Bucknell University Honor Code}
   \begin{enumerate}
@@ -276,15 +217,70 @@ To earn more than 85\%, you must do the following:
 
   \subsection{Accommodations}
   
-  Any student who needs an accommodation based on the impact of a disability should contact Heather Fowler, Director of the \href{https://www.bucknell.edu/about-bucknell/accessibility-resources/services-and-resources-for-students/academic-accommodations}{Office of Accessibility Resources} at hf007@bucknell.edu, 570-577-1188 or in room 212 Carnegie Building who will coordinate reasonable accommodations for students with documented disabilities. The college will make reasonable accommodations for persons with disabilities. 
+  Any student who needs an accommodation based on the impact of a disability should contact Heather Fowler, Director of the \href{https://www.bucknell.edu/life-bucknell/diversity-equity-inclusion/accessibility-resources}{Office of Accessibility Resources} at hf007@bucknell.edu, 570-577-1188 or in room 212 Carnegie Building who will coordinate reasonable accommodations for students with documented disabilities. The college will make reasonable accommodations for persons with disabilities. 
 
 %-------------------------------------------------------
 
 \section{License}
   
-    Creative Commons plays an important role in open science, open data, open source efforts. This class is covered by a \href{"http://creativecommons.org/licenses/"}{Creative Commons} license. The license we'll use for class materials, code and presentations is covered by  the "Attribution-ShareAlike 4.0 International" license, which is commonly called the CC BY-SA 4.0 license. Some of the materials for this course, including portions of the Syllabus, are derived from work by Roger H. French \href{"https://twitter.com/frenchrh"}{@frenchrh} Kyocera Professor, Materials Science, Case Western Reserve University.
+    Creative Commons plays an important role in open science, open data, open source efforts. This class is covered by a \href{"http://creativecommons.org/licenses/"}{Creative Commons} license. The license we'll use for class materials, code, and presentations is covered by the "Attribution-ShareAlike 4.0 International" license, which is commonly called the CC BY-SA 4.0 license. Some of the materials for this course, including portions of the Syllabus, are derived from work by Roger H. French \href{"https://twitter.com/frenchrh"}{@frenchrh} Kyocera Professor, Materials Science, Case Western Reserve University.
 
-%-----------------------------------------
+
+%-------------------------------------------------------
+\FloatBarrier
+\section{BIOL 364 Syllabus: Weekly Topics}
+\begin{table}[ht] 
+	\centering % used for centering table 
+	\begin{tabular}{| c | m{5cm} | m{3cm} | m{5.5cm} |} % centered columns (4 columns) 
+	\hline %inserts horizontal line
+	{\bf Week:Date} & {\bf Topic} & {\bf Reading} & {\bf Project}  \\ % inserts table heading 
+	\hline 
+	\hline % inserts double horizontal line 
+%	 w1\addtolength{}{•}
+  w1:13Jan2020 & Using R, Rstudio, Git & HART1-3 \newline PRP4-5 & Making Graphs in R \\ % inserting body of the table 
+	\hline
+	w2:20Jan2020 & Simple Data Exploration & HART4 \newline PRP6-10 \newline EDA4-7 \newline OIS1-4 & Data Exploration in R \\ 
+	\hline
+	w3:27Jan2020 & Data Visualization & HART5,11 \newline EDA15-16 \newline OIS5-7 & {\bf R Tutorial Project}\\ 
+	\hline 
+	w4:03Feb2020 & Advanded Hypothesis Testing & HART6-8 \newline OIS8-9 & Exploratory Data Analysis \\ 
+	\hline 
+	w5:10Feb2020 & Questionable Data Practices & R4DS22-25 \newline Fraser.pdf & Multiple Testing \newline Model Fitting \\ 
+	\hline 
+	w6:17Feb2020 & Questionable Data Practices & PRP12 \newline EDA12-14 \newline Forstmeier.pdf & {\bf QRP Case Studies Project} \\ 
+	\hline 
+	w7:24Feb2020 & Transcriptomics & \href{https://rnaseq.uoregon.edu/}{RNA-seqlopedia} \newline Brooks.pdf & QC \& Mapping Statistics\\ 
+	\hline 
+	w8:02Mar2020 & Transcriptomics  & SARTools.pdf \newline Williams.pdf & {\bf Transcriptomics Pipeline Project I}\\ 
+	\hline 
+	09Mar2020 & \multicolumn{3}{c}{\bf SPRING BREAK}\\ 
+	\hline
+	w9:16Mar2020 & Interactive Data & minitufte.pdf & {\bf Transcriptomics Pipeline Project II}  \\ 
+	\hline
+	w10:23Mar2020 & Final Project & reproducible-code.pdf &  {\bf TAKEHOME MIDTERM} \newline Data Archives \\
+	\hline
+	w11:30Mar2020 & Final Project &  & Data Wrangling  \\
+	\hline
+	w12:06Apr2020 & Final Project &  & Preregistration  \newline {\bf Data Visualization Project} \\
+	\hline
+	w13:13Apr2020 & Final Project &  & {\bf Final Project Presentations} \\
+	\hline 
+	w14:20Apr2020 & Final Project & & {\bf Final Project Presentations}  \\ 
+	\hline
+	\hline
+	\hline
+	{\bf 06May2020}	  & \multicolumn{3}{c}{\bf TAKEHOME FINAL} \\
+	\hline
+	\hline
+\end{tabular}
+ 
+\caption{BIOL364/664 Weekly Syllabus. Peng R Programming for Data Science (PRP), Peng Exploratory Data Analysis (EDA), Open Intro Statistics (OIS), R for Data Science (R4DS),  and A Primer in Biological Data Analysis and Visualization Using R (HART) refers to chapters assigned as reading. }
+\label{table:Syllabus} % is used to refer this table in the text 
+\end{table} 
+
+\FloatBarrier
+
+%-------------------------------------------------------
 
 
 \end{document}
