@@ -23,6 +23,9 @@ https://happygitwithr.com/index.html
 Troubleshooting Git:
 https://bookdown.org/rdpeng/RProgDA/version-control-and-github.html
 
+Tufte's Ten Rules of Data Design: 
+http://www.sealthreinhold.com/school/tuftes-rules/index.php
+
 ## For Future Reference (We aren't ready for this yet!)
 
 Common statistical tests are linear models (or: how to teach stats) 
